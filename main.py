@@ -55,8 +55,8 @@ def home():
         else:
             return render_template("home.html", username = username, email = email, username_error = username_error, password_error = password_error, password2_error = password2_error, email_error = email_error, password=password, password2=password2)
 
-    if request.method=='GET':
-        return render_template("home.html")
+    
+    return render_template("home.html")
 
 
 @app.route("/welcome")
