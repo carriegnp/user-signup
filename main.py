@@ -50,7 +50,7 @@ def home():
             email_error = "Your email address must be at least 3 and shorter than 20."
         
         if not username_error and not password_error and not password2_error and not email_error:
-            return redirect(url_for("welcome", username=username, email=email))
+            return redirect(url_for("welcome", username=username))
             
         else:
             return render_template("home.html", username = username, email = email, username_error = username_error, password_error = password_error, password2_error = password2_error, email_error = email_error, password=password, password2=password2)
